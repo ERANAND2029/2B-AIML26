@@ -3,122 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript String Methods</title>
 </head>
+
 <body>
-   <script>
-    let name = "Anand"
-    let Last= new String (  )
-    last = "Rai"
-   </script> 
-   <script>
 
-    let name = "Anand"
-    let Last = new String()
-    Last = "Rai"
-
-    console.log(name.toUpperCase())
-    console.log(Last.toUpperCase())
-
-</script>
 <script>
 
-    let name = "Anand"
-    let Last = new String()
-    Last = "Rai"
+    // 1. String banana
 
-    console.log(name.toLowerCase())
-    console.log(Last.toLowerCase())
+    let name = "Anand";
 
-</script>
-<script>
+    let Last = new String();
+    Last = "Rai";
 
-    let name = "Anand"
-    let Last = new String()
-    Last = "Rai"
+    console.log("Name:", name);
+    console.log("Last Name:", Last);
 
-    console.log(name.charAt(0))
-    console.log(name.charAt(1))
-    console.log(Last.charAt(0))
 
-</script>
-<script>
+    // 2. toUpperCase()
 
-    let name = "Anand"
-    let Last = new String()
-    Last = "Rai"
+    console.log(name.toUpperCase());
+    console.log(Last.toUpperCase());
 
-    console.log(name.indexOf("a"))
-    console.log(name.indexOf("n"))
-    console.log(Last.indexOf("R"))
 
-</script>
-<script>
+    // 3. toLowerCase()
 
-    let name = "Anand"
-    let Last = new String()
-    Last = "Rai"
+    console.log(name.toLowerCase());
+    console.log(Last.toLowerCase());
 
-    console.log(name.lastIndexOf("n"))
-    console.log(name.lastIndexOf("a"))
 
-</script>
-<script>
+    // 4. charAt()
 
-    let name = "Anand"
-    let Last = new String()
-    Last = "Rai"
+    console.log(name.charAt(0));
+    console.log(name.charAt(1));
+    console.log(Last.charAt(0));
 
-    console.log(name.slice(0, 3))
-    console.log(Last.slice(0, 2))
 
-</script>
-<script>
+    // 5. indexOf()
 
-    let name = "Anand"
-    let Last = new String()
-    Last = "Rai"
+    console.log(name.indexOf("a"));
+    console.log(name.indexOf("n"));
+    console.log(Last.indexOf("R"));
 
-    console.log(name.split(""))
-    console.log(Last.split(""))
 
-</script>
-<script>
+    // 6. lastIndexOf()
 
-    let fullName = "Anand Rai"
+    console.log(name.lastIndexOf("n"));
+    console.log(name.lastIndexOf("a"));
 
-    console.log(fullName.split(" "))
 
-</script>
-<script>
+    // 7. slice()
 
-    let name = "Anand"
-    let Last = new String()
-    Last = "Rai"
+    console.log(name.slice(0, 3));
+    console.log(Last.slice(0, 2));
 
-    console.log(name.includes("An"))
-    console.log(name.includes("and"))
-    console.log(name.includes("Rahul"))
 
-</script>
-<script>
+    // 8. split("")
 
-    let name = "Anand"
-    let Last = new String()
-    Last = "Rai"
+    console.log(name.split(""));
+    console.log(Last.split(""));
 
-    console.log(name.replace("Anand", "Rahul"))
-    console.log(Last.replace("Rai", "Sharma"))
+
+    // 9. split(" ")
+
+    let fullName = "Anand Rai";
+
+    console.log(fullName.split(" "));
+
+
+    // 10. includes()
+
+    console.log(name.includes("An"));
+    console.log(name.includes("and"));
+    console.log(name.includes("Rahul"));
+
+
+    // 11. replace()
+
+    console.log(name.replace("Anand", "Rahul"));
+    console.log(Last.replace("Rai", "Sharma"));
+
+
+    // 12. concat()
+
+    console.log(name.concat(" ", Last));
 
 </script>
-<script>
 
-    let name = "Anand"
-    let Last = new String()
-    Last = "Rai"
-
-    console.log(name.concat(" ", Last))
-
-</script>
 </body>
 </html>
