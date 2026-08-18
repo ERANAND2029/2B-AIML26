@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operations</title>
+</head>
+<body>
+
+<script>
+
+    let a = [10, 20, 30, 40, 50, 60, 70, 80];
+
+    // 1. PUSH()
+    // Array ke END me element add karta hai
+    a.push(90);
+
+    console.log("After push:", a);
+    
+
+
+    // 2. POP()
+    // Array ke END se element remove karta hai
+    a.pop();
+
+    console.log("After pop:", a);
+    
+
+
+    // 3. SHIFT()
+    // Array ke START se element remove karta hai
+    a.shift();
+
+    console.log("After shift:", a);
+    
+
+
+    // 4. SLICE()
+    // Array ka ek PART copy karta hai
+    // Original array change NAHI hota
+
+    let b = a.slice(1, 4);
+
+    console.log("Slice:", b);
+    // [30, 40, 50]
+
+    console.log("Original array:", a);
+    // [20, 30, 40, 50, 60, 70, 80]
+
+
+    // 5. SPLICE()
+    // Array me ADD / REMOVE / REPLACE kar sakta hai
+    // Original array CHANGE hota hai
+
+    a.splice(2, 2);
+
+    console.log("After splice:", a);
+    // [20, 30, 60, 70, 80]
+
+</script>
+
+</body>
+</html>
