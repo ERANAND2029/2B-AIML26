@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration Form</title>
+
+    <script>
+        function validate() {
+
+            let n = document.getElementById("name").value;
+
+            if (n == "" && typeof n != "string") {
+                alert("Please enter your name");
+                return false;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <form action="" onsubmit="return validate()">
+
+        <h1>Registration Form</h1>
+
+        <label>Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        <br><br>
+
+        <label>Mobile:</label>
+        <input type="tel" name="mobile" placeholder="Enter mobile number">
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Enter email">
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" name="password" placeholder="Enter password">
+        <br><br>
+
+        <label>Re-enter Password:</label>
+        <input type="password" name="repassword" placeholder="Re-enter password">
+        <br><br>
+
+        <input type="submit" value="Register">
+
+    </form>
+
+</body>
+</html>
