@@ -78,7 +78,7 @@
 
 
 
-    <script>
+    <!-- <script>
 
         // Function Constructor
         function Student(name, className, rollno, pincode, cgpa, city) {
@@ -146,14 +146,32 @@
 
         
 
-        console.log(student1);
-        console.log(student2);
-        console.log(student3);
-        console.log(student4);
+      
+    </script> -->
+<script>
+
+    class student {
+        Constructor (name ,pincode){
+            this.name = name;
+            this.pincode = pincode;
 
 
-    </script>
+        }
+        display () {
+        console.log(this.name);
+        console.log(this.pincode);
+        }
+    }
+    let s1= new student ( "anand", 202020);
+    let s2= new student ( "karan", 202032 );
 
+    s1.display();
+    s2.display();
+
+    delete student.name
+
+      delete student.pincode
+</script>
 </body>
 
 </html>
