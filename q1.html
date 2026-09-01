@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <title>Product Object</title>
@@ -46,4 +46,44 @@ ABES.displayProduct();
 </script>
 
 </body>
+</html> -->
+
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+let sbi = {
+    name: "ANAND",
+    acno: 2503215300026,
+    ACB: 500000,
+
+    deposit: function(amount) {
+        this.ACB = this.ACB + amount;
+    },
+
+    withdraw: function(amount) {
+
+        if (amount > this.ACB) {
+            document.write("Insuf Balance<br>");
+        }
+          else {
+            this.ACB = this.ACB - amount;
+            document.write("Withdrawal Sful<br>");
+            document.write("Current Balance: " + this.ACB);
+        }
+    }
+};
+
+let amount = Number(prompt("Enter withdrawal amount"));
+
+sbi.withdraw(amount)
+
+</script>
+
+</body>
 </html>
+```
