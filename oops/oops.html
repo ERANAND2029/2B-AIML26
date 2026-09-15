@@ -14,16 +14,44 @@
 //         console.log('Hello constructor');
 //     }
 // }
-class Hello {
-    constructor(name) {
-        this.faculty = "anand";
-        console.log("Hello constructor");
+// class Hello {
+//     constructor(name) {
+//         this.faculty = "anand";
+//         console.log("Hello constructor");
+//     }
+// }
+
+// let h = new Hello();
+
+// document.write(h.faculty);
+
+// """"""""""""""""""""""""""""""""""""""""""""""""$
+// class Hello{
+//     faculty="anand"
+
+// }
+// let n = new Hello()
+// document.write(h.faculty)
+
+// ####################################################################################################$
+
+class Student {
+    constructor(roll, name, pass) {
+        this.RollNumber = roll;
+        this.Name = name;
+        this.Pass = pass;
+
+        document.write(this.RollNumber );
+        document.write(this.Name );
+        document.write(this.Pass );
     }
 }
 
-let h = new Hello();
+Student.S1 = new Student();
 
-document.write(h.faculty);
+Student.S2 = new Student(250, "anand", "pass");
+
+Student.S3 = new Student(251, "aditya", "fail");
 </script>
 </body>
 </html>
