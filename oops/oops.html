@@ -55,7 +55,55 @@
 
 // #################################################################################################$
 // class method
+// class Student {
+//     constructor(roll, name, pass) {
+//         this.RollNumber = roll;
+//         this.Name = name;
+//         this.Pass = pass;
+//     }
 
+//     display() {
+//         document.write("Roll Number: " + this.RollNumber + "<br>");
+//         document.write("Name: " + this.Name + "<br>");
+//         document.write("Result: " + this.Pass + "<br><br>");
+//     }
+// }
+
+// let S1 = new Student(101, "Anand", "Pass");
+// let S2 = new Student(250, "Anand", "Pass");
+// let S3 = new Student(251, "Aditya", "Fail");
+
+// S1.display();
+// S2.display();
+// S3.display();
+
+// ##############################################################################################$
+// static 
+// class Student {
+//     static fName = "Anand";
+//     static lName = "Rai";
+
+//     static display() {
+//         document.write(Student.fName );
+//         document.write(Student.lName);
+//     }
+// }
+
+// Student.display();
+class Student {
+
+    static fName = "Anand";
+    static lName = "Rai";
+
+    display() {
+        document.write(Student.fName + "<br>");
+        document.write(Student.lName);
+    }
+}
+
+let s1 = new Student();
+
+s1.display();
 </script>
 </body>
 </html>
