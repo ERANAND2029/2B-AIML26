@@ -6,13 +6,83 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-            class BankAccount{
-                constructor(ACN,ACHN,BAL)
-                this.acnumber = ACN;
-                this.acholdername = ACHN;
-                this.balance = BAL;
+
+<script>
+
+    class BankAccount {
+
+        static bankInfo() {
+            document.write("Bank Name: State Bank of India<br>");
+            document.write("General Banking Information: Safe Banking<br>");
+        }
+
+        constructor(ACN, ACHN, BAL) {
+            this.acnumber = ACN;
+            this.acholdername = ACHN;
+            this.balance = BAL;
+        }
+
+        deposit(amount) {
+            this.balance = this.balance + amount;
+
+            document.write("Dep Succe<br>");
+            document.write(this.balance + "<br>");
+        }
+
+        withdraw(amount) {
+
+            if (amount > this.balance) {
+                document.write("Insufficient Balance<br>");
             }
-    </script>
+            else {
+                this.balance = this.balance - amount;
+
+                document.write("Withdr Succe<br>");
+                document.write(this.balance + "<br>");
+            }
+        }
+
+        displayBalance() {
+            document.write(this.acnumber );
+            document.write(  this.acholdername );
+            document.write( this.balance );
+        }
+    }
+
+
+    
+    BankAccount.bankInfo();
+
+
+ 
+    let A1 = new BankAccount(101, "Anand", 50000);
+    let A2 = new BankAccount(102, "Aditya", 30000);
+
+
+   
+    document.write("<h3>Account 1</h3>");
+
+    A1.displayBalance();
+
+    A1.deposit(10000);
+
+    A1.withdraw(5000);
+
+    A1.displayBalance();
+
+
+  
+    document.write("<h3>Account 2</h3>");
+
+    A2.displayBalance();
+
+    A2.deposit(5000);
+
+    A2.withdraw(40000);
+
+    A2.displayBalance();
+
+</script>
+
 </body>
 </html>
