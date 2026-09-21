@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Product System</title>
+</head>
+<body>
+
+<script>
+    class Product {
+        constructor(productId, productName, price) {
+            this.productId = productId;
+            this.productName = productName;
+            this.price = price;
+        }
+
+        getDiscountedPrice(discount) {
+            let finalPrice = this.price - (this.price * (discount / 100));
+            return finalPrice;
+        }
+
+        static compareProducts(p1, p2) {
+            if (p1.price > p2.price) {
+                document.write("Higher Priced Product: " + p1.productName + " (Rs. " + p1.price + ")<br>");
+            } else if (p2.price > p1.price) {
+                document.write("Higher Priced Product: " + p2.productName + " (Rs. " + p2.price + ")<br>");
+            } else {
+                document.write("Both products have the same price.<br>");
+            }
+        }
+
+        display() {
+            document.write("Product ID: " + this.productId + "<br>");
+            document.write("Product Name: " + this.productName + "<br>");
+            document.write("Price: Rs. " + this.price + "<br>");
+        }
+    }
+
+    class Electronics extends Product {
+        constructor(productId, productName, price, warranty) {
+            super(productId, productName, price);
+            this.warranty = warranty;
+        }
+
+        display() {
+            super.display();
+            document.write("Warranty: " + this.warranty + "<br>");
+        }
+    }
+
+    document.write("<h3>General Products</h3>");
+    let p1 = new Product(101, "College Bag", 1500);
+    let p2 = new Product(102, "Running Shoes", 2500);
+
+    p1.display();
+    document.write("Price after 10% discount: Rs. " + p1.getDiscountedPrice(10) + "<br><hr>");
+
+    p2.display();
+    document.write("Price after 15% discount: Rs. " + p2.getDiscountedPrice(15) + "<br><hr>");
+
+    document.write("<h3>Product Price Comparison</h3>");
+    Product.compareProducts(p1, p2);
+    document.write("<hr>");
+
+    document.write("<h3>Electronics Item</h3>");
+    let e1 = new Electronics(201, "Gaming Laptop", 65000, "2 Years");
+    e1.display();
+</script>
+
+</body>
+</html>
