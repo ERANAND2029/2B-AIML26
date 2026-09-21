@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Payroll System</title>
 </head>
 <body>
+
+<script>
+    // Base class
+    class Employee {
+        constructor(id, name, basicSalary) {
+            this.id = id;
+            this.name = name;
+            this.basicSalary = basicSalary;
+        }
+
+        calculateSalary() {
+            return this.basicSalary;
+        }
+
+        displayDetails() {
+            document.write("ID: " + this.id + "<br>");
+            document.write("Name: " + this.name + "<br>");
+            document.write("Total Salary: " + this.calculateSalary() + "<br>");
+            document.write("<hr>");
+        }
+    }
+
+  
+    class Manager extends Employee {
+        constructor(id, name, basicSalary, incentive) {
+            super(id, name, basicSalary);
+            this.incentive = incentive;
+        }
+
+      
+        calculateSalary() {
+            return this.basicSalary + this.incentive;
+        }
+    }
+
     
+    document.write("<h3>Employee Details</h3>");
+    let emp = new Employee(101, "Rahul Sharma", 30000);
+    emp.displayDetails();
+
+    // Creating Manager Object
+    document.write("<h3>Manager Details</h3>");
+    let mgr = new Manager(201, "Amit Verma", 60000, 15000);
+    mgr.displayDetails();
+</script>
+
 </body>
 </html>
