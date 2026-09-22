@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Cab Booking System</title>
+</head>
+<body>
+
+<script>
+    class Vehicle {
+        constructor(vehicleNo, driverName, distance) {
+            this.vehicleNo = vehicleNo;
+            this.driverName = driverName;
+            this.distance = distance;
+        }
+
+        static displayPlatform() {
+            document.write("<h2>Welcome to QuickCab Booking System</h2>");
+        }
+
+        calculateFare() {
+            return 0;
+        }
+
+            document.write("Vehicle No: " + this.vehicleNo + "<br>");
+            document.write("Driver Name: " + this.driverName + "<br>");
+            document.write("Distance Covered: " + this.distance + " km<br>");
+        }
+    }
+
+    class Car extends Vehicle {
+        constructor(vehicleNo, driverName, distance) {
+            super(vehicleNo, driverName, distance);
+        }
+
+        calculateFare() {
+            return this.distance * 15;
+        }
+
+        displayDetails() {
+            super.displayDetails();
+            document.write("Vehicle Type: Car (Rs. 15/km)<br>");
+            document.write("Total Fare: Rs. " + this.calculateFare() + "<br><hr>");
+        }
+    }
+
+    class Bike extends Vehicle {
+        constructor(vehicleNo, driverName, distance) {
+            super(vehicleNo, driverName, distance);
+        }
+
+        calculateFare() {
+            return this.distance * 8;
+        }
+
+        displayDetails() {
+            super.displayDetails();
+            document.write("Vehicle Type: Bike (Rs. 8/km)<br>");
+            document.write("Total Fare: Rs. " + this.calculateFare() + "<br><hr>");
+        }displayDetails() {
+        
+    }
+
+   
+    Vehicle.displayPlatform();
+
+  
+    document.write("<h3>Car Booking Details</h3>");
+    let myCar = new Car("MH-12-AB-1234", "Suresh Kumar", 25);
+    myCar.displayDetails();
+
+ 
+    document.write("<h3>Bike Booking Details</h3>");
+    let myBike = new Bike("MH-12-XY-9876", "Ramesh Singh", 12);
+    myBike.displayDetails();
+</script>
+
+</body>
+</html>

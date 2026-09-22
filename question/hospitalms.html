@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+</head>
+
+<body>
+
+<script>
+
+class Person {
+
+    static count = 0;
+
+    constructor(id, name, age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+
+        Person.count++;
+    }
+
+    displayDetails() {
+        document.write("Person ID: " + this.id + "<br>");
+        document.write("Name: " + this.name + "<br>");
+        document.write("Age: " + this.age + "<br>");
+    }
+
+    static displayCount() {
+        document.write("<br>Total Persons: " + Person.count + "<br>");
+    }
+}
+
+
+
+class Doctor extends Person {
+
+    constructor(id, name, age, specialization, consultationFee) {
+
+        super(id, name, age);
+
+        this.specialization = specialization;
+        this.consultationFee = consultationFee;
+    }
+
+    displayDetails() {
+
+        document.write("<h3>Doctor Details</h3>");
+
+        super.displayDetails();
+
+        document.write("Specialization: " + this.specialization + "<br>");
+        document.write("Consultation Fee: ₹" + this.consultationFee + "<br>");
+        document.write("<hr>");
+    }
+}
+
+
+
+class Patient extends Person {
+
+    constructor(id, name, age, disease, roomNo) {
+
+        super(id, name, age);
+
+        this.disease = disease;
+        this.roomNo = roomNo;
+    }
+
+    displayDetails() {
+
+        document.write("<h3>Patient Details</h3>");
+
+        super.displayDetails();
+
+        document.write("Disease: " + this.disease + "<br>");
+        document.write("Room No: " + this.roomNo + "<br>");
+        document.write("<hr>");
+    }
+}
+
+
+
+let doctor1 = new Doctor(
+    101,
+    "Dr. Rahul",
+    40,
+    "Cardiologist",
+    1000
+);
+
+let doctor2 = new Doctor(
+    102,
+    "Dr. Priya",
+    35,
+    "Neurologist",
+    1200
+);
+
+
+
+let patient1 = new Patient(
+    201,
+    "Aman",
+    25,
+    "Fever",
+    101
+);
+
+let patient2 = new Patient(
+    202,
+    "Rohit",
+    30,
+    "Fracture",
+    102
+);
+
+
+
+doctor1.displayDetails();
+doctor2.displayDetails();
+
+patient1.displayDetails();
+patient2.displayDetails();
+
+
+Person.displayCount();
+
+</script>
+
+</body>
+</html>
